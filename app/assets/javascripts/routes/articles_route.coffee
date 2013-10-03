@@ -7,4 +7,4 @@ Auth0.ArticlesRoute = Em.Route.extend
   # afterModel: ->
 
   model: ->
-    @get('store').findAll('aarticle')
+    @store.find('article');
