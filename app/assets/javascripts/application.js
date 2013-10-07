@@ -12,13 +12,16 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require foundation
+//= require_tree ./lib
 //= require handlebars
 //= require ember
 //= require ember-data
 //= require_self
-//= require auth0
+//= require auth
 
 // for more details see: http://emberjs.com/guides/application/
-Auth0 = Ember.Application.create();
+App = Ember.Application.create();
 
 //= require_tree .
+

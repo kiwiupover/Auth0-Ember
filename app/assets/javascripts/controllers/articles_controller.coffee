@@ -1,3 +1,3 @@
-Auth0.ArticlesController = Em.ArrayController.extend
+App.ArticlesController = Em.ArrayController.extend()
   # needs: []
   

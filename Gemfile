@@ -8,7 +8,8 @@ gem 'rails', '3.2.13'
 gem 'sqlite3'
 
 gem 'ember-rails'
-gem 'ember-source', '1.0.0'
+gem 'ember-source', '~> 1.0.0'
+gem 'ember-data-source', '~> 1.0.0.beta.2'
 
 
 # Gems used only for assets and not required
@@ -16,6 +17,8 @@ gem 'ember-source', '1.0.0'
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
+
+  gem 'zurb-foundation'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby

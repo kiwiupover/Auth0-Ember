@@ -1,4 +1,4 @@
 class ArticleSerializer < ActiveModel::Serializer
-  attributes :id, :name, :text, :date
+  attributes :id, :name, :text
 
 end

@@ -1,7 +1,3 @@
-# http://emberjs.com/guides/models/defining-a-store/
-
-
-Auth0.ApplicationAdapter = DS.MyRESTAdapter;
-# Auth0.Store = DS.Store.extend
+App.ApplicationAdapter =  DS.RESTAdapter
+# App.Store = DS.Store.extend
 #   adapter: DS.RESTAdapter.create()
-

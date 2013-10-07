@@ -1,4 +1,4 @@
-App.ArticlesRoute = Em.Route.extend
+App.LoginAuthRoute = Em.Route.extend
   # activate: ->
   # deactivate: ->
   # setupController: (controller, model)->
@@ -7,4 +7,5 @@ App.ArticlesRoute = Em.Route.extend
   # afterModel: ->
 
   model: ->
-    this.store.find('article')
+    debugger
+    return 
