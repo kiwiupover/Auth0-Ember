@@ -1,11 +1,10 @@
-App.LoginAuthRoute = Em.Route.extend
+App.LoginAuthRoute = Em.Route.extend()
   # activate: ->
   # deactivate: ->
   # setupController: (controller, model)->
   # renderTemplate: ->
-  # beforeModel: ->
+  # beforeModel: ->    
   # afterModel: ->
 
-  model: ->
-    debugger
-    return 
+  # model: ->
+
