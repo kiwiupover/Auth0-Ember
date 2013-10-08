@@ -12,7 +12,7 @@
     <!-- Left Nav Section -->
     <ul class="left">
       <li class="divider"></li>
-      <li>{{#link-to 'articles'}}Articles{{/link-to}}</li>
+      <li>{{#link-to 'posts'}}Posts{{/link-to}}</li>
       <li class="divider"></li>
       <li>{{#link-to 'photos'}}Photos{{/link-to}}</li>
       <li class="divider"></li>
@@ -23,9 +23,19 @@
       <li class="divider"></li>
   
       <li class="divider show-for-small"></li>
-      <li class="has-form">
-        {{#link-to 'login' class="button"}}Login{{/link-to}}
-      </li>
+      {{#if App.UserInfo.signedIn}}
+        <ul class="user">
+          <li><img {{bindAttr src=App.UserInfo.picture}} alt=""></li>
+          <li><p>{{App.UserInfo.name}}</p></li> 
+          <li class="has-form">
+            {{#link-to 'logout' }}Logout{{/link-to}}
+          </li>    
+        </ul>
+      {{else}}
+        <li class="has-form">
+          {{#link-to 'login' class="button"}}Login{{/link-to}}
+        </li>
+      {{/if}}
     </ul>
   </section>
 </nav>

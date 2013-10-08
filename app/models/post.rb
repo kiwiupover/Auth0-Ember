@@ -1,3 +1,3 @@
-class Article < ActiveRecord::Base
+class Post < ActiveRecord::Base
   attr_accessible :name, :text
 end
