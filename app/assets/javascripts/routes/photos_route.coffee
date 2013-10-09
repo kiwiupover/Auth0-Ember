@@ -1,1 +1,3 @@
-App.PhotosRoute = App.AuthenticationRoute.extend()
+App.PhotosRoute = App.AuthenticationRoute.extend
+  model: ->
+    this.store.find('photo')

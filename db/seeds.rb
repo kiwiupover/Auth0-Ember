@@ -20,7 +20,7 @@ articles = Post.create([
 )
 
 photos = Photo.create([
-  { name: 'potd', text: "/images/potd.png" },
-  { name: 'yohuda', text: "/images/yohuda.jpg" },
-  { name: 'easter', text: "/images/easter.jpg" }
+  { name: 'a-street', text: "/images/a-street.jpg" },
+  { name: 'turtle', text: "/images/turtle.jpg" },
+  { name: 'road', text: "/images/road.jpg" }
 ])

@@ -3,7 +3,6 @@ App.AuthenticationRoute = Ember.Route.extend(
     @redirectToLogin transition unless App.UserInfo.get("authToken")
 
   redirectToLogin: (transition) ->
-    
     alert "You must log in!"
     @transitionTo "login"
 

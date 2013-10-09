@@ -1,1 +1,9 @@
 <h3>Photos</h3>
+
+<ul class="small-block-grid-3">
+  {{#each}}
+    <li>
+      <img {{bindAttr src="text"}} alt="{{name}}">
+    </li>
+  {{/each}}
+</ul>
