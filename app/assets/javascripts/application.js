@@ -13,7 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require foundation
-//= require_tree ./lib
+//= require lib/auth0.lib
 //= require handlebars
 //= require ember
 //= require ember-data
@@ -23,29 +23,33 @@
 // for more details see: http://emberjs.com/guides/application/
 App = Ember.Application.create();
 
+
+//= require lib/ember_auth0.js
 //= require_tree .
 
 
 var auth0;
 
-auth0 = new Auth0({ 
+App.Auth0 = new Auth0({ 
   domain: "kiwiupover.auth0.com",
   clientID: "GDpoPc2LDD09sv0FaGK9Qt4l8esMigU2",
-  callbackURL: "http://localhost:3000/"
+  callbackURL: "http://localhost:3000/login/auth"
 });
 
-auth0.parseHash(function(profile, authId, authToken, state) {
+App.Auth0.parseHash(function(profile, authId, authToken, state) {
   window.location.hash = "";
   if(authId){
+    
     App.UserInfo = Em.Object.create({
       profile: profile,
       authId: authId,
       name: profile.name,
       picture: profile.picture
     });
+    localStorage.token = authToken,
+    App.UserInfo.set('signedIn', true);
   }
   
-  App.UserInfo.set('signedIn', true);
+
   return App.UserInfo;
 });
-

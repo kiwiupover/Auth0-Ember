@@ -1,7 +1,7 @@
 Auth0::Application.routes.draw do
   namespace :api do
 
-    resources :articles
+    resources :posts
 
     resources :photos
 
